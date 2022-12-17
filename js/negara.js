@@ -1,7 +1,6 @@
 let vm = new Vue({
     el: "#app",
     data: {
-        title: "Data Negara",
         dataNegara : null,
     },
     mounted() {
