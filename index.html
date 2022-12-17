@@ -29,14 +29,14 @@
                     <h2>Form Negara</h2>
                     <div id="alert"></div>
                     <div class="form-group">
-                        <label for="email">Nama Negara</label>
-                        <input type="text" name="email" id="email" class="form-control">
+                        <label for="nama_negara">Nama Negara</label>
+                        <input  type="text" name="nama_negara" id="email" class="form-control" v-model="nama_negara">
                     </div>
                     <div class="form-group">
-                        <label for="name">Ibu Kota</label>
-                        <input type="text" name="name" id="name" class="form-control">
+                        <label for="ibukota">Ibu Kota</label>
+                        <input type="text" name="ibukota" id="name" class="form-control" v-model="ibukota">
                     </div>
-                    <button class="btn btn-primary" onclick="createUser()" id="btnControl">Simpan</button>
+                    <button class="btn btn-primary" v-on:click="simpanNegara">Simpan</button>
                 </div>
                 <div class="col-lg-8">
                     <h2>List Negara</h2>
