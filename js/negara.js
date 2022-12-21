@@ -6,7 +6,18 @@ let vm = new Vue({
         nama_negara: null,
         ibukota: null
     },
+    created: function() {
+        this.tampilNegara()
+    },
     methods: {
+        tampilNegara: function() {
+            axios
+            .get('https://kota-negara-api.vercel.app/negara')
+            .then(response => {
+                console.log(response);
+                this.dataNegara = response.data
+            })
+        },
         simpanNegara: function() {
             console.log("Button Disimpan");
             let _data = {
@@ -17,19 +28,11 @@ let vm = new Vue({
             axios
             .post('https://kota-negara-api.vercel.app/negara', _data)
             .then(response => {
-                console.log(response);
+                this.tampilNegara();
             })
             .catch(error => {
                 console.log(error);
             })
         }
-    },
-    mounted() {
-        axios
-        .get('https://kota-negara-api.vercel.app/negara')
-        .then(response => {
-            console.log(response);
-            this.dataNegara = response.data
-        })
-    }
+    },     
 })

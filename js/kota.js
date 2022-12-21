@@ -6,8 +6,19 @@ let vm = new Vue({
         nama_Kota: null,
         asal_negara: null
     },
+    created: function() {
+        this.tampilKota()
+    },
     methods: {
-        simpanNegara: function() {
+        tampilKota: function() {
+            axios
+            .get('https://kota-negara-api.vercel.app/kota')
+            .then(response => {
+                console.log(response);
+                this.dataKota = response.data
+            })
+        },
+        simpanKota: function() {
             console.log("Button Disimpan");
             let _data = {
                 'nama_Kota' : this.nama_Kota,
@@ -17,19 +28,11 @@ let vm = new Vue({
             axios
             .post('https://kota-negara-api.vercel.app/kota', _data)
             .then(response => {
-                console.log(response);
+                this.tampilKota();
             })
             .catch(error => {
                 console.log(error);
             })
         }
     },
-    mounted() {
-        axios
-        .get('https://kota-negara-api.vercel.app/kota')
-        .then(response => {
-            console.log(response);
-            this.dataKota = response.data
-        })
-    }
 })
