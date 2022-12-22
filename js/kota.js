@@ -18,7 +18,7 @@ let vm = new Vue({
                 this.dataKota = response.data
             })
         },
-        simpanKota: function() {
+        simpankota: function() {
             console.log("Button Disimpan");
             let _data = {
                 'nama_Kota' : this.nama_Kota,
@@ -27,6 +27,17 @@ let vm = new Vue({
 
             axios
             .post('https://kota-negara-api.vercel.app/kota', _data)
+            .then(response => {
+                this.tampilKota();
+                $('#exampleModal').modal('hide');
+            })
+            .catch(error => {
+                console.log(error);
+            })
+        },
+        hapusKota(_id) {
+            axios
+            .delete('https://kota-negara-api.vercel.app/kota/' + _id)
             .then(response => {
                 this.tampilKota();
             })

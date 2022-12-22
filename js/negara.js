@@ -29,6 +29,7 @@ let vm = new Vue({
             .post('https://kota-negara-api.vercel.app/negara', _data)
             .then(response => {
                 this.tampilNegara();
+                $('#exampleModal').modal('hide');
             })
             .catch(error => {
                 console.log(error);

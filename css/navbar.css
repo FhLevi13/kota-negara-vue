@@ -17,27 +17,3 @@
 .item-right {
     text-align: right;
 }
-
-#sidebar {
-    width: 200px;
-    float: left;
-    background-color: lightgray;
-  }
-  
-  #sidebar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #sidebar li {
-    display: block;
-    margin: 0;
-    padding: 10px;
-    border-bottom: 1px solid gray;
-  }
-  
-  #sidebar a {
-    text-decoration: none;
-    color: black;
-  }
