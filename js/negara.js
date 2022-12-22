@@ -33,6 +33,16 @@ let vm = new Vue({
             .catch(error => {
                 console.log(error);
             })
+        },
+        hapusNegara(_id) {
+            axios
+            .delete('https://kota-negara-api.vercel.app/negara/' + _id)
+            .then(response => {
+                this.tampilNegara();
+            })
+            .catch(error => {
+                console.log(error);
+            })
         }
     },     
 })
