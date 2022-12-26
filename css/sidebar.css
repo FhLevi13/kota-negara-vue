@@ -69,7 +69,7 @@ body.open .overlay {
     gap: 6px;
 }
   
-@media (width >= 500px) {
+@media (width >= 600px) {
     .burger {
       display: none;
     }
@@ -119,13 +119,13 @@ body.open .burger-icon {
     transition-duration: 0.6s;
 }
   
-@media (width >= 330px) {
+@media (width >= 600px) {
     .sidebar {
       transition-property: translate;
     }
 }
   
-@media (width >= 400px) {
+@media (width >= 600px) {
     .sidebar {
         translate: 100% 0;
         width: 180px;
@@ -134,7 +134,7 @@ body.open .burger-icon {
     }
 }
   
-  @media (width >= 500px) {
+  @media (width >= 600px) {
     .sidebar {
         translate: 0 0;
     
@@ -179,7 +179,7 @@ body.open .sidebar {
     border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
   
-@media (width >= 350px) {
+@media (width >= 600px) {
     .sidebar-menu {
       padding-left: 0;
     }
