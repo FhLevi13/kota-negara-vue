@@ -10,7 +10,7 @@ body {
 
 .bg-img {
     background-image: url(/assets/travis-m-couch-cpweb.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: 100%;
 }
   
