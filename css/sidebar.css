@@ -18,6 +18,10 @@ body {
     color: white;
     background-color: #202124;
 }
+
+.modal-font {
+    color: black;
+}
   
 button {
     background: transparent;
