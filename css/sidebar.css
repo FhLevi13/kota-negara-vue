@@ -13,6 +13,11 @@ body {
     background-repeat: repeat-y;
     background-size: 100%;
 }
+
+.dark-mode {
+    color: white;
+    background-color: #202124;
+}
   
 button {
     background: transparent;
@@ -63,7 +68,7 @@ body.open .overlay {
     position: fixed;
     z-index: 3;
     top: 20px;
-    right: 12px;
+    right: 12px;    
     display: flex;
     align-items: center;
     gap: 6px;
