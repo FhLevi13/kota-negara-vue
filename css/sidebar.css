@@ -1,23 +1,30 @@
 * {
     box-sizing: border-box;
+    overflow: hidden;
 }
   
 body {
     margin: 0;
+    padding: 0;
     background: #202124;
     color: #f9f9f9;
+    max-width: 100%;
 }
 
 .bg-img {
     background-image: url(/assets/travis-m-couch-cpweb.jpg);
-    background-repeat: repeat-y;
-    background-size: 100%;
+    background-size: auto;
+    background-position: center top;
+    color: white;
 }
 
-.dark-mode {
-    color: white;
-    background-color: #202124;
+.center-object {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
 
 .modal-font {
     color: black;
@@ -30,12 +37,7 @@ button {
     cursor: pointer;
 }
 
-ul {
-    list-style-type: none;
-    overflow: hidden;
-}
-
-li a {
+h6 a {
     display: block;
     border: 0;
     padding: 0;
@@ -76,12 +78,6 @@ body.open .overlay {
     display: flex;
     align-items: center;
     gap: 6px;
-}
-  
-@media (width >= 600px) {
-    .burger {
-      display: none;
-    }
 }
   
 .burger-avatar {
@@ -128,31 +124,6 @@ body.open .burger-icon {
     transition-duration: 0.6s;
 }
   
-@media (width >= 600px) {
-    .sidebar {
-      transition-property: translate;
-    }
-}
-  
-@media (width >= 600px) {
-    .sidebar {
-        translate: 100% 0;
-        width: 180px;
-        transition: 0.4s;
-        border-left: 1px solid rgba(255, 255, 255, 0.16);
-    }
-}
-  
-  @media (width >= 600px) {
-    .sidebar {
-        translate: 0 0;
-    
-        opacity: 1;
-        visibility: visible;
-        filter: blur(0);
-    }
-}
-  
 body.open .sidebar {
     translate: 0 0;
     opacity: 1;
@@ -187,32 +158,4 @@ body.open .sidebar {
     padding-left: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
-  
-@media (width >= 600px) {
-    .sidebar-menu {
-      padding-left: 0;
-    }
-}
-  
-/* .sidebar-menu > button {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 200;
-    letter-spacing: 2px;
-    line-height: 1;
-    padding: 10px 20px;
-}
-  
-.sidebar-menu > button > img {
-    width: 17px;
-    height: 17px;
-}
-  
-.sidebar-menu > button > span {
-    color: #f9f9f9;
-    font-size: 11px;
-    translate: 0 1px;
-} */
   
