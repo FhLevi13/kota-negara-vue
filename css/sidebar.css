@@ -33,6 +33,11 @@ body {
     flex-direction: column;
 }
 
+.center-center {
+    display: flex;
+    justify-content: center;
+}
+
 .modal-font {
     color: black;
 }
