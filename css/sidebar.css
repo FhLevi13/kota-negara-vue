@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    overflow-x: hidden;
 }
   
 body {
@@ -9,6 +8,11 @@ body {
     background: #202124;
     color: #f9f9f9;
     max-width: 100%;
+    overflow: hidden;
+}
+
+.kota-negara {
+    overflow-y: auto;
 }
 
 .bg-img {
@@ -26,10 +30,6 @@ body {
     width: 60%;
     margin: auto;
     flex-direction: column;
-}
-
-.no-scroll {
-    overflow: hidden;
 }
 
 .modal-font {
