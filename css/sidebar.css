@@ -19,6 +19,7 @@ body {
     background-image: url(/assets/travis-m-couch-cpweb.jpg);
     background-size: auto;
     background-position: center top;
+    background-attachment: fixed;
     color: white;
 }
 
